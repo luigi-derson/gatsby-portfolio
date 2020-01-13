@@ -1,9 +1,16 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import { Title, Paragraph } from "../components/text/index"
-import { Section } from "../components/container/index"
+import Head from "../components/head"
+import { Title, Paragraph } from "../components/shared/text"
+import Section from "../components/section"
+import {
+  StyledLink,
+  PrimaryButton,
+  StyledButton,
+} from "../components/shared/button"
+import { HeroWrapper, FlexContainer } from "../components/shared/container"
 
 const HomePage = () => {
   const data = useStaticQuery(graphql`
@@ -19,15 +26,35 @@ const HomePage = () => {
 
   return (
     <Layout>
+      <Head />
       <Section>
-        <Title>{data.site.siteMetadata.title}</Title>
-        <Paragraph>
-          I'm {data.site.siteMetadata.author}, front-end developer with graphic
-          design background based in Manchester, UK.
-        </Paragraph>
-        <Paragraph>
-          Want to work togheter? <Link to="/contact">Get in touch</Link>
-        </Paragraph>
+        <HeroWrapper>
+          <Title>I love to build simple, clear and intuitive websites</Title>
+          <Paragraph>
+            I'm {data.site.siteMetadata.author}, front-end developer with
+            graphic design background based in Manchester, UK.
+          </Paragraph>
+          <Paragraph>
+            Some of the tools I usually use are SASS, Styled Components,
+            React.js, Gatsby, Node, and git.
+          </Paragraph>
+          <StyledLink to="/contact">
+            <PrimaryButton>Check portfolio</PrimaryButton>
+          </StyledLink>
+        </HeroWrapper>
+      </Section>
+      <Section>
+        <FlexContainer direction={"column"} align={"end"}>
+          <Title>I don't like to write</Title>
+          <Paragraph>
+            This could be my blog, but I dn't like to write anything, just read
+            content, but anyways it's a section
+          </Paragraph>
+          <Paragraph right>Want to read my blog?</Paragraph>
+          <StyledLink to="/blog">
+            <StyledButton>Let's go!</StyledButton>
+          </StyledLink>
+        </FlexContainer>
       </Section>
     </Layout>
   )

@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
 
   *{
     box-sizing: inherit;
@@ -17,12 +17,11 @@ export default createGlobalStyle`
     font-size: 1em;
     line-height: 1.15;
     box-sizing: border-box;
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    font-family: "Karla", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-weight: 400;
     min-height: 100%;
-    width: 100%;
-    -webkit-text-size-adjust: 100%;
+    width: 100vw;
   }
 
   body {

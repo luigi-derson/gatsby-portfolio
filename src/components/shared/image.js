@@ -12,5 +12,5 @@ export const WhiteLogo = styled.img.attrs({
 export const BlackLogo = styled.img.attrs({
   src: BlackLogoPath,
 })`
-  height: 3.5rem;
+  height: 2.3rem;
 `
