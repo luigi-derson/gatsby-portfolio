@@ -6,7 +6,6 @@ export const StyledMain = styled.main`
 `
 
 export const StyledHeader = styled.header`
-  background: ${props => props.theme.base.lgGray};
   padding: ${props => props.theme.size.md} 0;
   display: flex;
   justify-content: space-between;
@@ -18,24 +17,35 @@ export const StyledSection = styled.section`
 
 export const StyledFooter = styled.footer`
   background: ${props => props.theme.base.dkGray};
-  padding: ${props => props.theme.size.lg};
+  padding: ${props => props.theme.size.lg} 0;
   color: ${props => props.theme.base.white};
 `
 
 export const FlexContainer = styled.div`
   display: flex;
-  width: 100%;
-  ${({ justify }) => justify && `justify-content: ${justify};`}
-  ${({ align }) => align && `align-items: ${align};`}
-  ${({ direction }) => direction && `flex-direction: ${direction};`}
-  ${({ padding }) => padding && `padding: ${padding};`}
-  ${({ margin }) => margin && `margin: ${margin};`}
-  ${({ minWidth }) => minWidth && `min-width: ${minWidth};`}
-  ${({ maxWidth }) => maxWidth && `max-width: ${maxWidth};`}
-  ${({ height }) => height && `height: ${height};`}
-  ${({ minHeight }) => minHeight && `min-height: ${minHeight};`}
-  ${({ maxHeight }) => maxHeight && `max-height: ${maxHeight};`}
+  flex-direction: ${props => (props.column ? "column" : "row")};
+  justify-content: center;
+  align-items: center;
 `
+export const HeaderContainer = styled(FlexContainer)`
+  justify-content: space-between;
+`
+
+// export const FlexContainer = styled.div`
+//   display: flex;
+//   width: 100%;
+//   ${({ justify }) => justify && `justify-content: ${justify};`}
+//   ${({ align }) => align && `align-items: ${align};`}
+//   ${({ direction }) => direction && `flex-direction: ${direction};`}
+//   ${({ padding }) => padding && `padding: ${padding};`}
+//   ${({ margin }) => margin && `margin: ${margin};`}
+//   ${({ minWidth }) => minWidth && `min-width: ${minWidth};`}
+//   ${({ maxWidth }) => maxWidth && `max-width: ${maxWidth};`}
+//   ${({ height }) => height && `height: ${height};`}
+//   ${({ minHeight }) => minHeight && `min-height: ${minHeight};`}
+//   ${({ maxHeight }) => maxHeight && `max-height: ${maxHeight};`}
+// `
+
 export const MainContainer = styled.div`
   width: 100%;
   max-width: 70rem;
@@ -44,9 +54,8 @@ export const MainContainer = styled.div`
 `
 export const HeroWrapper = styled(FlexContainer)`
   width: 100%;
-  flex-direction: column;
-
-  @media (min-width: ${props => props.theme.breakpoint.md}) {
+  justify-content: space-between;
+  div {
     width: 50%;
   }
 `

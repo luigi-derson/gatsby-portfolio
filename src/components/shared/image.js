@@ -1,16 +1,17 @@
 import styled from "styled-components"
 
-import WhiteLogoPath from "../../images/logo-white.svg"
-import BlackLogoPath from "../../images/logo-black.svg"
+import designer from "../../images/hero-img.svg"
 
-export const WhiteLogo = styled.img.attrs({
-  src: WhiteLogoPath,
+export const Designer = styled.img.attrs({
+  src: designer,
+  alt: "Designer",
 })`
-  height: 2rem;
+  width: 75%;
+  height: 100%;
 `
-
-export const BlackLogo = styled.img.attrs({
-  src: BlackLogoPath,
-})`
-  height: 2.3rem;
+export const ImageWrapper = styled.div`
+  width: ${props => (props.width ? props.width : "100%")};
+  height: ${props => (props.height ? props.height : "100%")};
+  display: flex;
+  justify-content: flex-end;
 `

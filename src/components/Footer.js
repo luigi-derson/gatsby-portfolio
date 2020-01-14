@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { StyledFooter, MainContainer, FlexContainer } from "./shared/container"
+import { StyledFooter, MainContainer } from "./shared/container"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -16,9 +16,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <MainContainer>
-        <FlexContainer justify={"center"}>
-          <p>Created by {data.site.siteMetadata.author} &copy; 2020</p>
-        </FlexContainer>
+        <p>Created by {data.site.siteMetadata.author} &copy; 2020</p>
       </MainContainer>
     </StyledFooter>
   )

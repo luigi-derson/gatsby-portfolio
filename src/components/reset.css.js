@@ -21,13 +21,13 @@ export default createGlobalStyle`
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-weight: 400;
     min-height: 100%;
-    width: 100vw;
   }
 
   body {
     margin: 0;
     width: 100%;
     height: 100%;
+    background: ${props => props.theme.base.white}
   }
 
   main {

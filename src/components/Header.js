@@ -1,18 +1,23 @@
 import React from "react"
 
-import { BlackLogo } from "./shared/image"
+import { BlackLogo, WhiteLogo } from "./shared/image"
+import Logo from "./shared/logo"
 import { NavBar } from "./shared/nav"
 import { NavList } from "./shared/list"
 import { StyledLink } from "./shared/button"
-import { StyledHeader, MainContainer, FlexContainer } from "./shared/container"
+import {
+  StyledHeader,
+  MainContainer,
+  HeaderContainer,
+} from "./shared/container"
 
 const Header = () => {
   return (
     <StyledHeader>
       <MainContainer>
-        <FlexContainer justify={"space-between"}>
+        <HeaderContainer>
           <StyledLink to="/">
-            <BlackLogo />
+            <Logo />
           </StyledLink>
           <NavBar>
             <NavList>
@@ -30,7 +35,7 @@ const Header = () => {
               </li>
             </NavList>
           </NavBar>
-        </FlexContainer>
+        </HeaderContainer>
       </MainContainer>
     </StyledHeader>
   )
