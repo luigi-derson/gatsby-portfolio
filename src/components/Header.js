@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './shared/logo'
-import { NavBar } from './shared/nav'
+import NavBar from './shared/nav'
 import { NavList } from './shared/list'
 import { StyledLink } from './shared/button'
 import {
