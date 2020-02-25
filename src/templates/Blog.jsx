@@ -1,10 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+/* eslint-disable */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
-import Layout from "../components/Layout"
-import Head from "../components/Head"
-import { Title, Paragraph } from "../components/shared/text"
+import Layout from '../components/Layout'
+import Head from '../components/Head'
+import { Title, Paragraph } from '../components/shared/text'
 
 // export const query = graphql`
 //   query($slug: String!) {
@@ -31,14 +33,13 @@ export const query = graphql`
   }
 `
 
-const Blog = props => {
-  const { title, author, publishedDate, body } = props.data.contentfulBlogPost
+const Blog = ({ data } = {}) => {
+  const { title, author, publishedDate, body } = data.contentfulBlogPost
   const options = {
     renderNode: {
-      //Fix image fetching
-      "embedded-asset-block": ({ data }) => {
-        const alt = data.target.fields.title["en-US"]
-        const url = data.target.fields.file["en-US"].url
+      'embedded-asset-block': ({ data }) => {
+        const alt = data.target.fields.title['en-US']
+        const url = data.target.fields.file['en-US'].url
         return <img alt={alt} src={url} />
       },
       paragraph: ({ content }) => {
@@ -58,6 +59,18 @@ const Blog = props => {
       {documentToReactComponents(body.json, options)}
     </Layout>
   )
+}
+
+Blog.propTypes = {
+  data: PropTypes.shape({
+    contentfulBlogPost: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      publishedDate: PropTypes.string.isRequired,
+      body: PropTypes.objectOf(PropTypes.object),
+    }),
+  }).isRequired,
 }
 
 export default Blog

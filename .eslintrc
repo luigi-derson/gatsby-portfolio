@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "semi": ["error", "never"],
+    "linebreak-style": ["error", "windows"],
+    "react/jsx-one-expression-per-line": "off",
+    "object-curly-newline": "off",
+    "arrow-parens": "off"
+  }
+}

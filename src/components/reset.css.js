@@ -1,18 +1,17 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
-
-  *{
+  * {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+
     &::before,
     &::after {
       box-sizing: inherit;
     }
   }
+
   html {
     font-size: 1em;
     line-height: 1.15;
@@ -27,7 +26,7 @@ export default createGlobalStyle`
     margin: 0;
     width: 100%;
     height: 100%;
-    background: ${props => props.theme.base.white}
+    background: ${({ theme }) => theme.base.white}
   }
 
   main {

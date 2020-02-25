@@ -1,29 +1,29 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledMain = styled.main`
-  padding: ${props => props.theme.size.lg} 0;
+  padding: ${({ theme }) => theme.size.lg} 0;
   min-height: calc(100vh - 86.4px - 66.4px);
 `
 
 export const StyledHeader = styled.header`
-  padding: ${props => props.theme.size.md} 0;
+  padding: ${({ theme }) => theme.size.md} 0;
   display: flex;
   justify-content: space-between;
 `
 
 export const StyledSection = styled.section`
-  padding: ${props => props.theme.size.lg} 0;
+  padding: ${({ theme }) => theme.size.lg} 0;
 `
 
 export const StyledFooter = styled.footer`
-  background: ${props => props.theme.base.dkGray};
-  padding: ${props => props.theme.size.lg} 0;
-  color: ${props => props.theme.base.white};
+  background: ${({ theme }) => theme.base.dkGray};
+  padding: ${({ theme }) => theme.size.lg} 0;
+  color: ${({ theme }) => theme.base.white};
 `
 
 export const FlexContainer = styled.div`
   display: flex;
-  flex-direction: ${props => (props.column ? "column" : "row")};
+  flex-direction: ${({ column }) => (column ? 'column' : 'row')};
   justify-content: center;
   align-items: center;
 `
@@ -34,23 +34,23 @@ export const HeaderContainer = styled(FlexContainer)`
 // export const FlexContainer = styled.div`
 //   display: flex;
 //   width: 100%;
-//   ${({ justify }) => justify && `justify-content: ${justify};`}
-//   ${({ align }) => align && `align-items: ${align};`}
-//   ${({ direction }) => direction && `flex-direction: ${direction};`}
-//   ${({ padding }) => padding && `padding: ${padding};`}
-//   ${({ margin }) => margin && `margin: ${margin};`}
-//   ${({ minWidth }) => minWidth && `min-width: ${minWidth};`}
-//   ${({ maxWidth }) => maxWidth && `max-width: ${maxWidth};`}
-//   ${({ height }) => height && `height: ${height};`}
-//   ${({ minHeight }) => minHeight && `min-height: ${minHeight};`}
-//   ${({ maxHeight }) => maxHeight && `max-height: ${maxHeight};`}
+//   ${({theme})({ justify }) => justify && `justify-content: ${({theme})justify};`}
+//   ${({theme})({ align }) => align && `align-items: ${({theme})align};`}
+//   ${({theme})({ direction }) => direction && `flex-direction: ${({theme})direction};`}
+//   ${({theme})({ padding }) => padding && `padding: ${({theme})padding};`}
+//   ${({theme})({ margin }) => margin && `margin: ${({theme})margin};`}
+//   ${({theme})({ minWidth }) => minWidth && `min-width: ${({theme})minWidth};`}
+//   ${({theme})({ maxWidth }) => maxWidth && `max-width: ${({theme})maxWidth};`}
+//   ${({theme})({ height }) => height && `height: ${({theme})height};`}
+//   ${({theme})({ minHeight }) => minHeight && `min-height: ${({theme})minHeight};`}
+//   ${({theme})({ maxHeight }) => maxHeight && `max-height: ${({theme})maxHeight};`}
 // `
 
 export const MainContainer = styled.div`
   width: 100%;
   max-width: 70rem;
   margin: 0 auto;
-  padding: 0 ${props => props.theme.size.lg};
+  padding: 0 ${({ theme }) => theme.size.lg};
 `
 export const HeroWrapper = styled(FlexContainer)`
   width: 100%;

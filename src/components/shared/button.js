@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
+/* eslint-disable */
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 export const A = styled.a`
   display: flex;
@@ -8,12 +9,12 @@ export const A = styled.a`
 `
 export const StyledButton = styled.button.attrs(props => ({
   disabled: props.disabled ? true : false,
-  type: props.submit ? "submit" : "button",
+  type: props.submit ? 'submit' : 'button',
 }))`
   color: ${props => props.theme.base.black};
   border: none;
   background: ${props => props.theme.base.white};
-  padding: ${props => (props.large ? "16px 24px" : "12px 18px")};
+  padding: ${props => (props.large ? '16px 24px' : '12px 18px')};
   font-size: ${props => props.theme.size.df};
   font-family: ${props => props.theme.font.title};
   line-height: 1.2;
@@ -25,7 +26,7 @@ export const StyledButton = styled.button.attrs(props => ({
   flex: none;
   align-items: center;
   justify-content: center;
-  opacity: ${props => (props.disabled ? "0.6" : "1")};
+  opacity: ${props => (props.disabled ? '0.6' : '1')};
   transition: background 0.2s linear;
 
   &:hover {
@@ -50,7 +51,7 @@ export const PrimaryButton = styled(StyledButton)`
 `
 
 export const StyledLink = styled(Link).attrs({
-  activeClassName: "active",
+  activeClassName: 'active',
 })`
   display: flex;
   flex: none;

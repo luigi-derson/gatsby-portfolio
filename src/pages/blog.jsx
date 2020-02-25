@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
-import Layout from "../components/Layout"
+import Layout from '../components/Layout'
 // import { FlexContainer } from "../components/shared/container"
-import { Title } from "../components/shared/text"
-import { BlogList } from "../components/shared/list"
-import { BlogLink } from "../components/shared/button"
+import { Title } from '../components/shared/text'
+import { BlogList } from '../components/shared/list'
+import { BlogLink } from '../components/shared/button'
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`

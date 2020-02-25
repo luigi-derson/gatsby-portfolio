@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.development`,
 })
 
@@ -59,6 +59,18 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-eslint`,
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

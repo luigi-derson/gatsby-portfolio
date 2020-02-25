@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import Layout from "../components/Layout"
-import { Title, Paragraph } from "../components/shared/text"
+import Layout from '../components/Layout'
+import { Title, Paragraph } from '../components/shared/text'
 
 const AboutPage = () => (
   <Layout pageTitle="About">

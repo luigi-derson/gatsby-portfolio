@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 
-import Layout from "../components/Layout"
-import { List } from "../components/shared/list"
-import { Title } from "../components/shared/text"
+import Layout from '../components/Layout'
+import { List } from '../components/shared/list'
+import { Title } from '../components/shared/text'
 
 const PortfolioPage = () => (
-  <Layout headTitle={"portfolio"}>
+  <Layout headTitle="portfolio">
     <Title>Check some of my last works!</Title>
     <List>
       <li>All</li>

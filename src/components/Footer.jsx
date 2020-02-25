@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
-import { StyledFooter, MainContainer } from "./shared/container"
+import { StyledFooter, MainContainer } from './shared/container'
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
